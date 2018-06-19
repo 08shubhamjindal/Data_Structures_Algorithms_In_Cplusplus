@@ -22,6 +22,8 @@
 // 5 2 4 1
 // 4 4
 // 1 2 4 5
+// 4 3
+// 1 2 3 4
 
 // SAMPLE OUTPUT
 
@@ -29,6 +31,9 @@
 // Average
 // Average
 // Good
+// Average
+
+
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
