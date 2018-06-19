@@ -37,7 +37,7 @@ bool Search (Binary * root, int data)
     {
       return false;
     }
-  else if (root->data = data)
+  else if (root->data == data)
     {
       return true;
     }
