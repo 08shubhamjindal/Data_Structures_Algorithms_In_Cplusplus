@@ -48,33 +48,8 @@ int getsum(int *st , int n, int querystart , int queryend)
     }
     return getsums(st , 0 ,n-1 , querystart , queryend , 0);
 }
-int updatevalues(int *st , int ss, int se , int i , int diff , int si)
-{
-    if(i<ss || i>se)
-    {
-        return;
-    }
-    st[si]= st[si]+ diff;
-    if(se!=ss)
-    {
-        int mid = getmid(ss ,se);
-        updatevalues(st,ss,mid,i,diff,2*si+1);
-        updatevalues(st,mid+1 , se , i, diff , 2*si+2);
-    }
-}
-int updatevalue( int a[], int *st , int n , int i , int value)
-{
-    if(i<0 || i>n-1)
-    {
-        cout<<"invalid input"<<endl;
-        return ;
-    }
-    int diff = value - a[i];
-    a[i] = value;
-    updatevalues(st , 0 ,n-1 ,i,diff , 0);
-}
 int main()
-{   int i,n,q,w,o,p;
+{   int i,n,q,w;
     int a[500];
     cin>>n; 
     for(i=0; i<n; i++)
@@ -87,10 +62,7 @@ int main()
     cin>>q>>w;
     }
     cout<<"Sum is"<<getsum(st,n,q,w)<<endl;
-    cout<<"enter the index and update value"<<endl;
-    cin>>o>>p;
-    updatevalue(a, st , n , o , p);
-    cout<<"updated sum is"<<getsum(st,n,q,w)<<endl;
+ 
 }
 
 
