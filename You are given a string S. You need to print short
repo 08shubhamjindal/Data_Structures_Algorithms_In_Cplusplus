@@ -1,0 +1,41 @@
+You are given a string S. You need to print short name of the given string.
+
+Input Format
+
+The first and only line of input contains a string S.
+
+Output Format
+
+You need to print the short name of provided string.
+SAMPLE INPUT
+
+Mohd Kafeel Khan
+
+SAMPLE OUTPUT
+
+M. K. Khan
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+    string a;
+    int i,l,x=0;
+     getline(cin , a);
+    l=a.length();
+    for(i=0;i<l;i++)
+    {
+     if(a[i]==' ')
+    {
+     cout<<a[x]<<". ";
+     x=i+1;
+    }
+    }
+    for(i=x;i<l;i++)
+    {
+     cout<<a[i];
+     }
+return 0;
+}
