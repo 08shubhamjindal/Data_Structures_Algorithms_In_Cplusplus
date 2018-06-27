@@ -1,24 +1,24 @@
-Given an array A consisting of integers of size N, you need to sort this array in non-decreasing order on the basis of the absolute value of the integers in the array. Print the sorted array to output then.
+// Given an array A consisting of integers of size N, you need to sort this array in non-decreasing order on the basis of the absolute value of the integers in the array. Print the sorted array to output then.
 
-Input:
+// Input:
 
-The first line consists of a single integer N, the number of elements in the array. The next line consists of N space separated elements. No two elements in the array will have same absolute value.
+// The first line consists of a single integer N, the number of elements in the array. The next line consists of N space separated elements. No two elements in the array will have same absolute value.
 
-Output:
+// Output:
 
-You need to print the absolute sorted array. See the sample output for clarification.
-SAMPLE INPUT
+// You need to print the absolute sorted array. See the sample output for clarification.
+// SAMPLE INPUT
 
-10
-9 -10 -11 20 1 2 -3 4 -5 6
+// 10
+// 9 -10 -11 20 1 2 -3 4 -5 6
 
-SAMPLE OUTPUT
+// SAMPLE OUTPUT
 
-1 2 -3 4 -5 6 9 -10 -11 20 
+// 1 2 -3 4 -5 6 9 -10 -11 20 
 
-Explanation
+// Explanation
 
-The output array is sorted by absolute values.
+// The output array is sorted by absolute values.
 
 #include<bits/stdc++.h>
 using namespace std;
