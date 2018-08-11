@@ -29,3 +29,53 @@
 
 // The first string is not a palindrome.
 // The second and third strings are palindromes of even and odd lengths respectively.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{  long long int n,i,j,q,flag=0;
+    cin>>n;
+    string s[n+1];
+    for(i=0; i<n; i++)
+    {
+    cin>>s[i];
+    q=s[i].length();
+    if(q==1)
+    {
+       cout<<"YES"<<" "<<"ODD"<<endl;
+    }
+    else
+    {
+      for(j=0; j<s[i].length()/2; j++)
+      {
+          if(s[i][j]==s[i][q-1])
+          {
+              flag=1;
+              q--;
+          }
+          else
+          {
+              flag=0;
+              break;
+          }
+      }
+      if(flag==1)
+      {
+          if(s[i].length()%2==0)
+          {
+              cout<<"YES"<<" "<<"EVEN"<<endl;
+          }
+          else
+          {
+              cout<<"YES"<<" "<<"ODD"<<endl;
+          }
+      }
+      else
+      {
+          cout<<"NO"<<endl;
+      }
+    }
+    }
+    
+}
