@@ -19,3 +19,39 @@ SAMPLE OUTPUT
 Explanation
 
 Subarray of maximum length conatins 5 10 20
+    #include <iostream>
+    #include<algorithm>
+    using namespace std;
+     
+    int main()
+    {
+    	long long int n,t,i,j,ans;
+    	
+        cin>>t;
+        while(t--)
+        {
+        	cin>>n;
+            long long int a[n],l[n];	
+        	for(i=0;i<n;i++)
+        	{
+        	cin>>a[i];
+        	}
+        	sort(a,a+n);
+        	for(i=0;i<n;i++)
+        	l[i]=1;
+        	ans=0;
+        	for(i=0;i<n;i++)
+        	{
+        		for(j=0;j<i;j++)
+        		{
+        			if(a[i]%a[j]==0)
+        			 l[i] = l[i]>l[j]+1 ? l[i]:l[j]+1 ;
+        	    }
+        	    ans = ans>l[i] ? ans : l[i];
+        	}
+        	
+        	cout<<ans<<endl;    
+       }
+        
+        return 0;
+    }
