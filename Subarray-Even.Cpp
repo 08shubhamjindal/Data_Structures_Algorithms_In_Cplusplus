@@ -1,36 +1,36 @@
-This is a DEBUGGING question.
+// This is a DEBUGGING question.
 
-You have an array of length N. A subarray is called Interesting if it contains only even numbers. You have to  find the maximum length of such Interesting subarray.
+// You have an array of length N. A subarray is called Interesting if it contains only even numbers. You have to  find the maximum length of such Interesting subarray.
 
-You are given a code which does the given task but has some bugs (errors). You have to make changes in the given function such that the code handles all the cases for errors and generate correct output every time.
+// You are given a code which does the given task but has some bugs (errors). You have to make changes in the given function such that the code handles all the cases for errors and generate correct output every time.
 
-Input
-First line contains T , denoting number of test cases.
-Each test case contains two lines:
-    - First line contains an integer N denoting the size of the array.
-    - Second line contains N space seperated integers denoting the value of array elements.
+// Input
+// First line contains T , denoting number of test cases.
+// Each test case contains two lines:
+//     - First line contains an integer N denoting the size of the array.
+//     - Second line contains N space seperated integers denoting the value of array elements.
 
-Ouput:
-For each test case, print the maximum length of Interesting subarray. If no such subarray exist,print -1.
+// Ouput:
+// For each test case, print the maximum length of Interesting subarray. If no such subarray exist,print -1.
 
-Input Constraints:
+// Input Constraints:
 
-Note:
+// Note:
 
-The input and output is handled by the code itself. You are just supposed to correct the function.
-SAMPLE INPUT
+// The input and output is handled by the code itself. You are just supposed to correct the function.
+// SAMPLE INPUT
 
-1
-4
-5 2 4 7
+// 1
+// 4
+// 5 2 4 7
 
-SAMPLE OUTPUT
+// SAMPLE OUTPUT
 
-2
+// 2
 
-Explanation
+// Explanation
 
-We can select 2nd and 3rd element as both are even numbers and form a subarray of length 2.
+// We can select 2nd and 3rd element as both are even numbers and form a subarray of length 2.
 
 
 #include <iostream>
