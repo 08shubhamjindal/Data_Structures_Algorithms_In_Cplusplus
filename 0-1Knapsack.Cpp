@@ -55,3 +55,28 @@ int main ()
     }
   return 0;
 }
+#include <bits/stdc++.h>
+using namespace std;
+long int n;
+int main ()
+{
+  int t;
+  cin >> t;
+  for (int j = 1; j <= t; j++)
+    {
+      long long int dp[10001], a[10001];
+      cin >> n;
+      for (long int i = 0; i < n; i++)
+      {
+	   cin >> a[i];
+      }
+      dp[0] = a[0];
+      dp[1] = max (a[0], a[1]);
+      for (long int i = 2; i < n; i++)
+      {
+	    dp[i] = max(a[i] + dp[i - 2], dp[i - 1]);
+      }
+      cout << "Case " << j << ": " << dp[n - 1] << endl;
+    }
+  return 0;
+}
