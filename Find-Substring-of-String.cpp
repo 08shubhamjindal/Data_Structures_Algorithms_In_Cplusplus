@@ -32,3 +32,43 @@ int main()
     }
 
 }
+-------------------------------------------------------------------------------------------------------------
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string str1 , str2;
+    int i,j,k,flag=0;
+    getline(std::cin, str1);
+    getline(std::cin, str2);
+    for(i=0; i<str1.length(); i++)
+    {
+        if(str2[0]==str1[i])
+        {
+            k=1;
+            for(j=i+1; j<i+str2.length(); j++)
+            {
+                if(str2[k]==str1[j] && k<str2.length())
+                {
+                    flag=1;
+                    k++;
+                }
+                else
+                {
+                    flag=0;
+                    k=1;
+                    break;
+                }
+            }
+        }
+    }
+    if(flag==1)
+    {
+        cout<<"yes";
+    }
+    else
+    {
+        cout<<"no";
+    }
+    
+}
