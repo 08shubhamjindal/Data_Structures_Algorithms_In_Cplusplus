@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,i;
+    cin>>n;
+    int a[n+1];
+    int blocks[100];
+    for(i=0; i<n; i++){
+        cin>>a[i];
+    }
+    int blocksize = sqrt(n);
+    blocks[0] = a[i];
+    int count=0;
+    for(i=1; i<n; i++){
+        if(i%blocksize==0){
+            count++;
+        }
+        blocks[count] = max(blocks[count] , a[i]);
+    }
+    int q,l,r;
+    cin>>q;
+    for(i=0; i<q; i++){
+        cin>>l>>r;
+        int ans = INT_MIN;
+    while(l<r && l%blocksize!=0 && l!=0){
+       ans =  max(ans, a[l]);
+        l++;
+    }
+    while(l+blocksize<=r){
+        ans = max(ans, blocks[l/blocksize]);
+        l = l + blocksize;
+    }
+    while(l<=r){
+        ans = max(ans, a[l]);
+        l++;
+    }
+    cout<<ans<<endl;
+    }
+}
