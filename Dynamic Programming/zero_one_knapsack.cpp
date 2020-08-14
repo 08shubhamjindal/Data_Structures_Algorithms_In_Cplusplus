@@ -6,7 +6,7 @@ int zero_one_knapsack(int index, int wt[], int val[], int bag_value, int n){
         return 0;
     }
     if(bag_value==0) return 0;
-    if(dp[index][bag_value]!=-1){dp[index][bag_value]}
+    if(dp[index][bag_value]!=-1){ return dp[index][bag_value]}
     if(wt[index]<=bag_value){
         int left = val[index] + zero_one_knapsack(index+1, wt, val, bag_value-wt[index], n);
         int right = zero_one_knapsack(index+1, wt, val, bag_value, n);
